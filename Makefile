@@ -53,8 +53,9 @@ ms_compile:
 ms_cuirun:
 	vsim $(TOP) -c -lib $(TARGET) -do "run -all;quit"
 
-ms_guirun:
-	vsim $(TOP) -lib $(TARGET) -do "add wave -position insertpoint sim:/$(TOP)/*"
+# Fow now, I'm not sure about a command to run simulation with GUI mode
+# ms_guirun:
+# 	vsim $(TOP) -lib $(TARGET) -do "add wave -position insertpoint sim:/$(TOP)/*"
 
 clean:
 	rm -rf $(TARGET) $(VCD) $(LOG) csrc $(TARGET).daidir ucli.key modelsim.ini transcript $(WRK_DIR)
